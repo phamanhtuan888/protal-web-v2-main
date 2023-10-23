@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  core-cms:
+    build:
+      context: .
+      args:
+        - node_env
+    container_name: core-cms
+    env_file:
+      - .env
+    working_dir: /usr/src/app

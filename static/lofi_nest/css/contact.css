@@ -1,0 +1,95 @@
+.layout-contact {
+    margin-bottom:30px
+  }
+  .layout-contact .contact {
+    margin-bottom:20px
+  }
+  .layout-contact .contact .logo-contact {
+    margin-bottom:20px
+  }
+  .layout-contact .contact .contact-title {
+    color:#231f20;
+    font-size:20px;
+    margin-bottom:20px;
+    padding-bottom:15px;
+    border-bottom:1px solid #aaa
+  }
+  .layout-contact .contact .contact-desc {
+    color:#231f20;
+    font-size:16px;
+    margin-bottom:20px
+  }
+  .layout-contact .contact .time_work .item {
+    position:relative;
+    padding-left:26px;
+    font-size:16px;
+    margin-bottom:5px
+  }
+  .layout-contact .contact .time_work .item svg {
+    width:15px;
+    height:15px;
+    position:absolute;
+    top:3px;
+    left:0
+  }
+  .layout-contact .contact .time_work .item svg path {
+    fill:#000
+  }
+  .layout-contact .form-contact .form-title {
+    color:#bf9f70;
+    text-align:center;
+    font-size:32px;
+    font-style:italic;
+    font-weight:400;
+    line-height:40px;
+    margin-bottom:15px
+  }
+  @media (max-width: 767px) {
+    .layout-contact .form-contact .form-title {
+      font-size:27px
+    }
+  }
+  .layout-contact .form-contact .form-desc {
+    color:#231f20;
+    font-size:16px;
+    margin-bottom:20px;
+    text-align:center
+  }
+  .layout-contact .form-contact .group_contact input,
+  .layout-contact .form-contact .group_contact textarea {
+    border:solid 1px #ebebeb;
+    width:100%;
+    margin-bottom:15px;
+    outline:none;
+    font-size:14px;
+    border-radius:5px
+  }
+  .layout-contact .form-contact .group_contact input {
+    padding:5px 20px
+  }
+  .layout-contact .form-contact .group_contact textarea {
+    padding:10px 20px
+  }
+  .layout-contact .form-contact .group_contact .btn-lienhe {
+    background:#bf9f70;
+    color:#fff;
+    border:initial;
+    padding:0 20px;
+    height:35px;
+    line-height:35px;
+    font-size:14px;
+    border-radius:5px
+  }
+  .layout-contact .form-contact .group_contact .btn-lienhe:hover {
+    background:#997d55
+  }
+  @media (max-width: 991px) {
+    .form-contact {
+      margin-bottom:30px
+    }
+  }
+  #contact_map iframe {
+    width:100%;
+    height:450px
+  }
+  

@@ -1,0 +1,27 @@
+{
+  "presets": [
+    "next/babel",
+    "@zeit/next-typescript/babel"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", {
+      "legacy": true
+    }],
+    ["transform-dynamic-import"],
+    ["@babel/plugin-syntax-dynamic-import"],
+    [
+      "@babel/plugin-proposal-optional-chaining"
+    ],
+    [
+      "import", {
+        "libraryName": "antd",
+        "style": true
+      }
+    ],
+    ["module-resolver", {
+      "alias": {
+        "dva": "dva-no-router"
+      }
+    }]
+  ]
+}

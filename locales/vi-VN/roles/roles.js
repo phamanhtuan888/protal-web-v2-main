@@ -1,0 +1,20 @@
+module.exports = {
+  'app.roles.name': 'Phân quyền nhóm tài khoản',
+  'app.roles.MenuName': 'Tên thanh công cụ',
+  'app.roles.isViewed': 'Xem',
+  'app.roles.IsUpdate': 'Sửa',
+  'app.roles.IsParaclinical': 'Pk lâm sàng',
+  'app.roles.IsPrescription': 'PK kê đơn',
+  'app.roles.IsSaveResult': 'PK kết quả',
+  'app.roles.IsDelete': 'Xóa',
+  'app.roles.IsStatus': 'Trạng thái',
+  'app.roles.Image': 'Icon',
+  'app.roles.rollback': 'Quay lại',
+  'app.roles.save': 'Lưu lại',
+  'app.roles.success': 'Cập nhật thành công',
+  'app.roles.filter.categoryName.placeholder':
+    'Phải bắt đầu là chữ cái và chỉ bao gôm chữ cái, dấu  _@ và khoảng trống ở giữa, độ dài tối đa 50 ký tự',
+  'app.roles.filter.categoryName': 'Giá trị tìm kiếm không thích hợp',
+  'app.roles.search.button': 'Lấy quyền mẫu',
+  'app.roles.search.button2': 'Tìm kiếm',
+};

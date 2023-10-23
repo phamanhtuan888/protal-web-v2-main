@@ -1,0 +1,18 @@
+module.exports = {
+  'app.menu.name': 'Quản lý thanh công cụ',
+  'app.menu.createName': 'Thêm mới thanh công cụ',
+  'app.menu.editName': 'Sửa thông tin thanh công cụ',
+  'app.menu.Title': 'Tên thanh công cụ',
+  'app.menu.Name': 'Định danh',
+  'app.menu.MenuParentId': 'Cấp trên',
+  'app.menu.Url': 'Đường dẫn',
+  'app.menu.Status': 'Trạng thái',
+  'app.menu.Component': 'Thành phần',
+  'app.menu.Status.1': 'Kích hoạt',
+  'app.menu.Status.2': 'Hủy',
+  'app.menu.Image': 'Icon',
+  'app.menu.create': 'Thêm mới thanh công cụ',
+  'app.menu.Order': 'Thứ tự',
+  'app.menu.searchUser': "Tìm kiếm theo tên thanh công cụ",
+  'app.menu.update.order.success': 'Cập nhật thứ tự thành công',
+};

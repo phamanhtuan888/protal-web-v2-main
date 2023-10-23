@@ -1,0 +1,5 @@
+User-agent: *
+Allow: vgasoft.vn
+Allow: www.vgasoft.vn
+Disallow: /login
+Sitemap: https://vgasoft.vn/sitemap_vga.xml

@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  core-cms:
+    image: localhost:5000/core-cms:latest
+    env_file:
+      - .env.production
+    command: npm run start

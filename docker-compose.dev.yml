@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  core-cms:
+    image: localhost:5000/core-cms:latest
+    volumes:
+      - "core-cms-src:/usr/src/app"
+      - "core-cms-node_modules:/usr/src/app/node_modules"
+
+volumes:
+  core-cms-src:
+  core-cms-node_modules:
