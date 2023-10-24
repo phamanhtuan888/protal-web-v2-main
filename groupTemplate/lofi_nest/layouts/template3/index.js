@@ -2,6 +2,7 @@ import { getResponsiveImage } from "@/componentWebs/ImageNew";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import $ from "jquery";
+import FormatPrice from "@/utils/formatPrice";
 
 const Templates3 = ({ data, dataResult }) => {
   const { list } = dataResult;
@@ -18,13 +19,13 @@ const Templates3 = ({ data, dataResult }) => {
   };
   function formatNumber(numberString) {
     const number = parseFloat(numberString);
-  
+
     if (isNaN(number)) {
       return "Số không hợp lệ";
     }
 
     const formattedNumber = number.toLocaleString("vi-VN");
-  
+
     return formattedNumber;
   }
   return (
@@ -73,7 +74,7 @@ const Templates3 = ({ data, dataResult }) => {
                       // style="transform: translate3d(-288px, 0px, 0px); transition: all 0.25s ease 0s; width: 1444px;"
                     >
                       {list.map((item, index) => (
-                        <div class="item_product_main owl-item">
+                        <div class="item_product_main owl-item" key={index}>
                           <form class="variants product-action ">
                             <div class="product-thumbnail">
                               <a
@@ -148,10 +149,14 @@ const Templates3 = ({ data, dataResult }) => {
                                 </a>
                               </h3>
                               <div class="price-box">
-                                <span class="price">{item.dealPrice}</span>
-                                <span class="compare-price">
-                                  {item.price}₫
-                                </span>
+                                <FormatPrice
+                                  price={item.dealPrice}
+                                  className="price"
+                                />
+                                <FormatPrice
+                                  price={item.price}
+                                  className="compare-price"
+                                />
                               </div>
                             </div>
                             <div class="product-btn d-none d-xl-block">

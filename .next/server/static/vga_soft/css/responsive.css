@@ -1,0 +1,219 @@
+/* for mobile */
+
+@media (min-width:576px) and (max-width:767px) {
+
+    /* div.banner {
+        margin-top: 0;
+    } */
+    div.banner .banner-title .title-content {
+        font-size  : 16px;
+        font-weight: bold;
+    }
+
+    div.banner .banner-detail {
+        width: 100%;
+    }
+
+    div.banner .banner-detail .detail-content {
+        text-align: center;
+        font-size : 14px;
+    }
+
+    .product-menu-filter {
+        display: none;
+    }
+
+    .product-menu-filter-mobile {
+        display: block !important;
+    }
+
+    .product-main .menu-filter-list .menu-filter-item {
+        display: flex;
+        padding: 10px 30px
+    }
+
+    .menu-filter-list .menu-filter-item {
+        display: flex;
+        padding: 10px 30px
+    }
+
+    .template-main .template-main-right-top {
+        padding-left : 20px;
+        padding-right: 20px;
+    }
+
+    .template {
+        margin-bottom: 50px;
+    }
+
+    .flex_footer .text-left {
+        margin: 10px 0 !important;
+    }
+
+    .flex_footer {
+        display: block !important;
+    }
+
+    .footer .py-0 p {
+        margin-top: 30px;
+    }
+
+    .banner .container {
+        margin-top: 100px;
+    }
+
+    .banner .container .banner-text .banner__main-text__content__heading {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+
+    /* div.banner {
+        margin-top: 0;
+    } */
+    div.banner .banner-title .title-content {
+        font-size  : 16px;
+        font-weight: bold;
+    }
+
+    div.banner .banner-detail {
+        width: 100%;
+    }
+
+    div.banner .banner-detail .detail-content {
+        text-align: center;
+        font-size : 14px;
+    }
+
+    .product-menu-filter {
+        display: none;
+    }
+
+    .product-menu-filter-mobile {
+        display: block !important;
+    }
+
+    .product-main .menu-filter-list .menu-filter-item {
+        display: flex;
+        padding: 10px 30px
+    }
+
+    .menu-filter-list .menu-filter-item {
+        display: flex;
+        padding: 10px 30px
+    }
+
+    .template-main .template-main-right-top {
+        padding-left : 20px;
+        padding-right: 20px;
+    }
+
+    .template {
+        padding-top: 100px;
+        margin-top : 0px
+    }
+
+    .product-list .product-item {
+        height: auto;
+    }
+
+    .flex_custom_footer {
+        display: block;
+    }
+
+    .flex_custom_footer>a>img {
+        margin-bottom: 10px;
+    }
+
+    .flex_footer .text-left {
+        margin: 10px 0 !important;
+    }
+
+    .flex_footer {
+        display: block !important;
+    }
+
+    .flex_footer .text-left {
+        margin: 10px 0 !important;
+    }
+
+    .footer .py-0 p {
+        margin-top: 30px;
+    }
+
+    .banner .container {
+        margin-top: 100px;
+    }
+
+    .banner .container .banner-text .banner__main-text__content__heading {
+        text-align: center;
+    }
+
+    .banner .container .banner-text .banner__main-text__content__heading p {
+        line-height: 35px;
+    }
+}
+
+/* for tablet */
+
+@media (min-width:768px) and (max-width:991px) {
+
+    /*    
+    div.banner {
+        margin-top: 0;
+    } */
+    div.banner .banner-title .title-content {
+        font-size  : 18px;
+        font-weight: bold;
+    }
+
+    div.banner .banner-detail {
+        width: 100%;
+    }
+
+    div.banner .banner-detail .detail-content {
+        text-align: center;
+        font-size : 16px;
+    }
+
+    .product-menu-filter {
+        display: none;
+    }
+
+    .product-menu-filter-mobile {
+        display: block !important;
+    }
+
+    .product-main .menu-filter-list .menu-filter-item {
+        display: flex;
+        padding: 10px 30px
+    }
+
+    .menu-filter-list .menu-filter-item {
+        display: flex;
+        padding: 10px 30px
+    }
+
+    .template-main .template-main-right-top {
+        justify-content: center;
+        padding-left   : 20px;
+        padding-right  : 20px;
+    }
+
+    .template {
+        margin-bottom: 50px;
+    }
+
+    .flex_footer {
+        display: block !important;
+    }
+
+    .flex_footer .text-left {
+        margin: 10px 0 !important;
+    }
+
+    .footer .py-0 p {
+        margin-top: 30px;
+    }
+}

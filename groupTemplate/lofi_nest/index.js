@@ -74,10 +74,10 @@ const detail = dynamic(() => import("./layouts/detail"), {
   ssr: true,
   loading: () => null,
 });
-const product = dynamic(() => import("./layouts/product"), {
-  ssr: true,
-  loading: () => null,
-});
+// const product = dynamic(() => import("./layouts/product"), {
+//   ssr: true,
+//   loading: () => null,
+// });
 const themeDetail = dynamic(() => import("./layouts/themeDetail"), {
   ssr: true,
   loading: () => null,
@@ -101,7 +101,7 @@ export default {
 
   // templates
 
-  [`${folder}_products`]: products,
+ 
   [`${folder}_policy`]: policy,
   [`${folder}_handBook`]: handBook,
   [`${folder}_contact`]: contact,
@@ -110,8 +110,9 @@ export default {
   [`${folder}_introduce`]: introduce,
   [`${folder}_introduceChild`]: introduceChild,
   [`${folder}_detail`]: detail,
-  [`${folder}_product`]: product,
+  // [`${folder}_product`]: product,
   [`${folder}_isTheme`]: themeDetail,
   [`${folder}_isDemo`]: demo,
+  [`${folder}_products`]: products,
 
 };

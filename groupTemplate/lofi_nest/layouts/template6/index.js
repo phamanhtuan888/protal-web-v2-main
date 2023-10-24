@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { getResponsiveImage } from "@/componentWebs/ImageNew";
 import dynamic from "next/dynamic";
-import $ from "jquery";
 import React, { useState } from "react";
+import FormatPrice from "@/utils/formatPrice";
 
 const Templates6 = ({ data, dataResult }) => {
   const { list } = dataResult;
@@ -107,7 +107,7 @@ const Templates6 = ({ data, dataResult }) => {
                         transform: "translate3d(0px, 0px, 0px)",
                         transition: "all 0.25s ease 0s",
                       }}
-                      // style="transform: translate3d(-288px, 0px, 0px); transition: all 0.25s ease 0s; width: 1444px;"
+                     
                     >
                       {list.map((item, index) => {
                         if (selectedCategoryId === item.categoriesId) {
@@ -187,11 +187,9 @@ const Templates6 = ({ data, dataResult }) => {
                                     </a>
                                   </h3>
                                   <div class="price-box">
-                                    <span class="price">{item.dealPrice}₫</span>
+                                  <FormatPrice price={item.dealPrice} className="price" />
                                     {item.price !== "0" ? (
-                                      <span class="compare-price">
-                                        {item.price}₫
-                                      </span>
+                                      <FormatPrice price={item.price} className="compare-price" />
                                     ) : null}
                                   </div>
                                 </div>

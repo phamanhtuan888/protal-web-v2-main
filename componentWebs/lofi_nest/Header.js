@@ -149,7 +149,7 @@ function Header(props) {
                               {menuItem.children.map(
                                 (childItem, childIndex) => (
                                   <li key={childIndex}>
-                                    <a className="" title={childItem.menusName} href={childItem.url}>
+                                    <a title={childItem.menusName} href={childItem.url}>
                                       {childItem.menusName}
                                     </a>
                                   </li>

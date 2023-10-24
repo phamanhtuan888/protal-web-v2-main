@@ -1,12 +1,10 @@
 import { getResponsiveImage } from "@/componentWebs/ImageNew";
 import dayjs from "dayjs";
 import dynamic from "next/dynamic";
+import FormatPrice from "@/utils/formatPrice";
 
 const Templates5 = ({ data, dataResult }) => {
-  function FormattedPrice({ price }) {
-    const formattedPrice = new Intl.NumberFormat('vi-VN').format(price);
-    return <span>{formattedPrice}</span>;
-  }
+  
   const { list } = dataResult;
 
   // console.log(data);
@@ -126,9 +124,9 @@ const Templates5 = ({ data, dataResult }) => {
                             {/* <div class="price-box">{item.price}₫</div> */}
                             <div class="price-box">
                               {/* <span class="price">{item.dealPrice}₫</span> */}
-                              <FormattedPrice price={item.dealPrice} />
+                              <FormatPrice price={item.dealPrice} className="price" />
                               {item.price !== '0' ? (
-                                  <span class="compare-price">{item.price}₫</span>
+                                  <FormatPrice price={item.price} className="compare-price" />
                                 ) : null}
                             </div>
                           </div>

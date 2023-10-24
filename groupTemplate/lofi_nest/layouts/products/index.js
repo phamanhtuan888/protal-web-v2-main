@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 import { getResponsiveImage } from "@/componentWebs/ImageNew";
 import ReactPaginate from "react-paginate";
+import FormatPrice from "@/utils/formatPrice";
 
 const SanPham = ({ dataResult, data, query }) => {
   const handlePageChange = (e) => {
@@ -12,7 +13,7 @@ const SanPham = ({ dataResult, data, query }) => {
     list: [ ...list],
     pagination,
   } = dataResult;
-  console.log(dataResult);
+  // console.log(data);
   return (
     <div className="container">
       <div className="row">
@@ -332,7 +333,13 @@ const SanPham = ({ dataResult, data, query }) => {
                               {item.productsName}
                             </a>
                           </h3>
-                          <div class="price-box">{item.dealPrice}</div>
+                          <div class="price-box">
+                            <FormatPrice price={item.dealPrice} className="price" />
+                            {item.price !== '0'? (
+                              <FormatPrice price={item.price} className="compare-price" />
+                            ): null}
+                          
+                          </div>
                         </div>
                         <div class="product-btn d-none d-xl-block">
                           <div class="actions-primary btn-views">

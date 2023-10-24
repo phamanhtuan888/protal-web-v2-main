@@ -1,0 +1,175 @@
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.view-demo {
+  height: 100vh;
+  width: 100%;
+}
+.view-demo .demo-header {
+  background: #18a4dd;
+  height: 40px;
+}
+
+.view-demo .desktop-view {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 40px);
+  text-align: center;
+}
+.view-demo .desktop-view .demo-container {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: cubic-bezier(.605,.195,.175,1);
+  -moz-transition-timing-function: cubic-bezier(.605,.195,.175,1);
+  transition-timing-function: cubic-bezier(.605,.195,.175,1);
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.view-demo .desktop-view .demo-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  border: none;
+}
+.view-demo .demo-header .view-back {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  line-height: 40px;
+  margin-right: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.view-demo .demo-header .view-back:hover {
+  text-decoration: none;
+  color: #23527c;
+}
+.view-demo .demo-header .view-type a.current, .view-demo .demo-header .view-type a:hover {
+  color: #fff;
+}
+.view-demo .demo-header .view-type a {
+  display: flex;
+  color: #8bd1ee;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 10px;
+  text-decoration: none;
+  align-items: center;
+}
+.view-demo .demo-header .view-type a svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  fill: #8bd1ee;
+  margin-right: 7px;
+  flex-shrink: 0;
+}
+.view-demo .demo-header .view-type a.mobile svg {
+  margin-right: 0;
+}
+.view-demo .demo-header .view-type a.current svg, .view-demo .demo-header .view-type a:hover svg {
+  fill: #fff;
+}
+
+.view-demo .demo-header .view-type a.tablet svg {
+  transform: rotate(-90deg);
+}
+.view-demo .demo-header .btn-registration {
+  line-height: 30px;
+  padding: 0 20px;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-top: 5px;
+  background: linear-gradient(to right, #C635E2, #2A6BFF);
+  color: #fff;
+  border-radius: 45px;
+  display: inline-block;
+  -webkit-transition-property: background-color border-color color;
+  -moz-transition-property: background-color border-color color;
+  transition-property: background-color border-color color;
+  -webkit-user-select: none;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  white-space: nowrap;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  text-decoration: none;
+}
+.view-demo .demo-header .view-normal {
+  font-size: 15px;
+  color: #fff;
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.view-demo .demo-header .view-back .icon-view-back {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../images/icon-back.png) no-repeat center center;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+@media (max-height: 677px){
+.view-demo .desktop-view .demo-container {
+    margin-top: 0 !important;
+    top: 0 !important;
+}
+}
+@media (min-width: 576px){
+.container {
+    max-width: 540px;
+}
+}
+@media (min-width: 768px){
+.container {
+    max-width: 720px;
+}
+.d-md-inline-block {
+  display: inline-block !important;
+}
+}
+@media (min-width: 992px){
+.container {
+    max-width: 960px;
+}
+.d-lg-inline-block {
+  display: inline-block !important;
+}
+}
+@media (min-width: 1200px){
+.container {
+    max-width: 1170px;
+}
+}

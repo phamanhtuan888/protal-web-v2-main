@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getResponsiveImage } from "@/componentWebs/ImageNew";
 const GioiThieu = ({ dataResult, data }) => {
   const { list } = dataResult;
-  console.log(list);
+  // console.log(list);
   return (
    
       <section class="page">

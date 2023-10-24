@@ -23,7 +23,7 @@ class Index extends Component {
       // console.log('detail', isDetail)
       try {
         const Templates = DATA_TEMPLATES[`${dataSite.templates.folder}_detail`];
-        // console.log(DATA_TEMPLATES[`${dataSite.templates.folder}_detail`]);
+       
         if (Templates) {
           return React.createElement(Templates, {
             ...this.props,
@@ -41,9 +41,9 @@ class Index extends Component {
       // console.log('product', isProduct)
       try {
         const Templates =
-          DATA_TEMPLATES[`${dataSite.templates.folder}_detail`];
+          DATA_TEMPLATES[`${dataSite.templates.folder}_product`];
         if (Templates) {
-          // console.log("Templates", DATA_TEMPLATES[`template_sea_kitchen_product`])
+         
           return React.createElement(Templates, {
             ...this.props,
             data,
@@ -190,10 +190,10 @@ class Index extends Component {
             item?.templateLayouts.folder !== ""
           ) {
             try {
-              // console.log(
-              //   "folder :",
-              //   `${dataSite.templates.folder}_${item?.templateLayouts.folder}`
-              // );
+              console.log(
+                "folder :",
+                `${dataSite.templates.folder}_${item?.templateLayouts.folder}`
+              );
 
               const Templates =
                 DATA_TEMPLATES[

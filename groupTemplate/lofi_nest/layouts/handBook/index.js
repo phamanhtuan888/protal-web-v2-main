@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getResponsiveImage } from "@/componentWebs/ImageNew";
 const CamNang = ({ dataResult, data }) => {
   const { list } = dataResult;
-  console.log(list);
+  // console.log(list);
   return (
     
       <div class="layout-blog" itemscope="" itemtype="https://schema.org/Blog">

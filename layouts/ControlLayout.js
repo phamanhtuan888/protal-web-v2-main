@@ -25,16 +25,17 @@ class Control extends PureComponent {
   render() {
     const { dataSite } = this.props;
     // console.log(dataSite);
-    // console.log(DATA_TEMPLATES);
+    
     try {
       const Templates = DATA_TEMPLATES[`${dataSite.templates.folder}`];
-      // console.log(Templates);
+      // console.log(`${dataSite.templates.folder}`);
       if (Templates) {
         return React.createElement(Templates, {
           ...this.props,
         });
       
       }
+      
       return <PageNotFound />;
     } catch (error) {
       return <PageNotFound />;
