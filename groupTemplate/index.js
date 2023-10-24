@@ -41,7 +41,7 @@ class Index extends Component {
       // console.log('product', isProduct)
       try {
         const Templates =
-          DATA_TEMPLATES[`${dataSite.templates.folder}_product`];
+          DATA_TEMPLATES[`${dataSite.templates.folder}_detail`];
         if (Templates) {
          
           return React.createElement(Templates, {
@@ -190,10 +190,7 @@ class Index extends Component {
             item?.templateLayouts.folder !== ""
           ) {
             try {
-              console.log(
-                "folder :",
-                `${dataSite.templates.folder}_${item?.templateLayouts.folder}`
-              );
+              // console.log("folder :", `${dataSite.templates.folder}_${item?.templateLayouts.folder}`);
 
               const Templates =
                 DATA_TEMPLATES[

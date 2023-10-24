@@ -31,7 +31,7 @@ export async function queryCategoryInfoByName(name, sitesId, languagesId) {
   const query = {
     filter: JSON.stringify({ sitesId, status: "1" }),
   };
-  console.log(`${CONFIG.API_SERVER_WEB}/categories/${name}?${stringify(query)}&languagesId=${languagesId}`)
+  // console.log(`${CONFIG.API_SERVER_WEB}/categories/${name}?${stringify(query)}&languagesId=${languagesId}`)
   return request(
     `${CONFIG.API_SERVER_WEB}/categories/${name}?${stringify(
       query

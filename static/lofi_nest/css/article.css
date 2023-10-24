@@ -419,7 +419,7 @@
   }
   @media (max-width: 767px) {
     .section_blog .block-blog .item-blog .block-thumb {
-      width:130px
+      width:100%;
     }
   }
   .section_blog .block-blog .item-blog .block-content {
@@ -529,7 +529,7 @@
   }
   @media (max-width: 767px) {
     .section_blog .block-blog .item-blog .block-content {
-      width:calc(100% - 145px)
+      width:100%;
     }
   }
   #article-comments .article-comment {

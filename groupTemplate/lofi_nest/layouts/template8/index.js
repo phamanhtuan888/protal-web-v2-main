@@ -50,9 +50,9 @@ const Templates8 = ({ data, dataResult }) => {
                 }}
                 // style="transform: translate3d(-288px, 0px, 0px); transition: all 0.25s ease 0s; width: 1444px;"
               >
-                {list?.map((item, index) => (
+                {list.slice(0,4)?.map((item, index) => (
                   <div class="item-blog owl-item" key={index}>
-                    <div class="block-thumb">
+                    <div class="block-thumb" style={{margin:'unset'}}>
                       <a
                         class="thumb"
                         href={`/tin-tuc/${item.urlSlugs}`}

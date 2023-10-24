@@ -71,7 +71,7 @@ class Detail extends React.Component {
     let relateArticles;
     if (data?.id) {
       await dispatch({
-        type: "webs/fetchListProduct",
+        type: "webs/fetchListArticle",
         payload: {
           filter: {
             status: "1",
@@ -86,6 +86,7 @@ class Detail extends React.Component {
         },
       });
     }
+    
 
     return {
       datainfoArticle: data,

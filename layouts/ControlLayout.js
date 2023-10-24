@@ -10,10 +10,13 @@ const lofi_nest = dynamic(() => import('./layoutData/lofi_nest'), {
 const phong_kham = dynamic(() => import('./layoutData/phong_kham'), {
   ssr: true,
   loading: () => null,
+});const vgasoft = dynamic(() => import('./layoutData/vga_soft'), {
+  ssr: true,
+  loading: () => null,
 });
 
 const DATA_TEMPLATES = {
-  lofi_nest,phong_kham
+  lofi_nest,phong_kham,vgasoft
 };
 
 const PageNotFound = dynamic(() => import('@/componentWebs/NoFindPage'), {
@@ -28,7 +31,7 @@ class Control extends PureComponent {
     
     try {
       const Templates = DATA_TEMPLATES[`${dataSite.templates.folder}`];
-      // console.log(`${dataSite.templates.folder}`);
+      console.log(`${dataSite.templates.folder}`);
       if (Templates) {
         return React.createElement(Templates, {
           ...this.props,

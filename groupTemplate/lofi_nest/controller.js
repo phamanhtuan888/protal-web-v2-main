@@ -16,6 +16,7 @@ import policy from "./layouts/policy/controller";
 import handBook from "./layouts/handBook/controller";
 import products from "./layouts/products/controller";
 
+
 export default {
   template1,
   template2,
