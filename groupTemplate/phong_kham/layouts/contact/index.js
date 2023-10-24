@@ -15,7 +15,7 @@ const LienHe = ({ data, dataResult, query, dataSite }) => {
   const imageResize = [380, 450, 540];
   
   const { siteProfiles } = dataSite;
-  console.log(data);
+  // console.log(data);
   return (
     <div className="container">
       <div class="row">

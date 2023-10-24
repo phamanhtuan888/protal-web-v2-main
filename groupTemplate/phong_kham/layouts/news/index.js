@@ -7,7 +7,7 @@ import { getResponsiveImage } from "@/componentWebs/ImageNew";
 const TinTuc = ({ dataResult, query }) => {
   const handlePageChange = (e) => {
     window.location = `/${query.name}?page=${e.selected + 1}`;
-    console.log('jfjfjf')
+    // console.log('jfjfjf')
   };
   const {
     list: [topResult, ...list],

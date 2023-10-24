@@ -98,7 +98,6 @@ export default {
 
   // templates
 
- 
   [`${folder}_policy`]: policy,
   [`${folder}_handBook`]: handBook,
   [`${folder}_contact`]: contact,
@@ -107,7 +106,6 @@ export default {
   [`${folder}_introduce`]: introduce,
   [`${folder}_introduceChild`]: introduceChild,
   [`${folder}_detail`]: detail,
- 
   [`${folder}_isTheme`]: themeDetail,
   [`${folder}_isDemo`]: demo,
   [`${folder}_products`]: products,

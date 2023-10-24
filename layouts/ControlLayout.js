@@ -31,7 +31,7 @@ class Control extends PureComponent {
     
     try {
       const Templates = DATA_TEMPLATES[`${dataSite.templates.folder}`];
-      console.log(`${dataSite.templates.folder}`);
+      // console.log(`${dataSite.templates.folder}`);
       if (Templates) {
         return React.createElement(Templates, {
           ...this.props,

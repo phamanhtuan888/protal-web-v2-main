@@ -13,28 +13,11 @@ function Header(props) {
   const { siteProfiles } = dataSite;
   const router = useRouter();
   const logoRef = useRef();
-  console.log(dataSite);
+  // console.log(dataSite);
   const [logoId, setLogoId] = useState(0);
   const [src, setSrc] = useState("");
   const [isNavVisible, setIsNavVisible] = useState(false);
-  // drawer's state
-  // const [open, setOpen] = useState(false);
-  // const showDrawer = () => {
-  //   setOpen((prev) => !prev);
-  // };
-  // const onClose = () => {
-  //   setOpen(false);
-  // };
-
-  // change logo url base on scroll
-  // useEffect(
-  //   () => {
-  //     const logo = dataSite?.logo?.[logoId]?.file || "";
-  //     const imageResize = [240, 240, 300];
-  //     setSrc(getResponsiveImage(logo, imageResize));
-  //   },
-  //   [logoId]
-  // );
+ 
   useEffect(
     () => {
       const logo = dataSite?.logo?.[logoId]?.file || "";
@@ -70,32 +53,7 @@ function Header(props) {
             <a class="logo_header" href="http://localhost:8834/">
               <img style={{ height: "54px" }} src={src} alt="" ref={logoRef} />
             </a>
-            {/* <nav class={`nav_menu_hidden ${isNavVisible ? "show" : ""}`}>
-              <ul style={{ marginBottom: 0 }}>
-                {menuHeader.map((menuItem) => (
-                  <li
-                    className="nav-item header-nav__item"
-                    key={menuItem?.id}
-                    style={{ whiteSpace: "nowrap" }}
-                  >
-                    <a
-                      className="header-nav__link nav-link"
-                      href={menuItem?.url}
-                    >
-                      <p>{menuItem?.menusName}</p>
-                    </a>
-                  </li>
-                ))}
-                <form class="search_bar_hidden " action="/search">
-                  <input
-                    name="title"
-                    id="search_hidden"
-                    class="search_text_hidden"
-                  />
-                  <button type="button" class="search_button_hidden " />{" "}
-                </form>
-              </ul>
-            </nav> */}
+
             <span class="hidden-md hidden-sm col-sm-6 title_navbar">
               <i class="fa fa-bars" />
             </span>
@@ -256,27 +214,17 @@ function Header(props) {
       </header>
       <div
         class="menu_mobile max_991 hidden-md hidden-lg"
-        style={{display:''}}
+        style={{ display: "none" }}
       >
         <ul class="ul_collections">
-          <li class="level0 level-top parent">
-            <a href="/chuyen-khoa">Chuyên khoa</a>
-          </li>
-          <li class="level0 level-top parent">
-            <a href="/gioi-thieu-40">Giới thiệu </a>
-          </li>
-          <li class="level0 level-top parent">
-            <a href="/huong-dan">Hướng dẫn </a>
-          </li>
-          <li class="level0 level-top parent">
-            <a href="/tin-tuc-60">Tin tức</a>
-          </li>
-          <li class="level0 level-top parent">
-            <a href="/lien-he-48">Liên hệ </a>
-          </li>
+          {menuHeader?.map((menuItem) => (
+            <li class="level0 level-top parent">
+              <a href={menuItem?.url}>{menuItem?.menusName}</a>
+            </li>
+          ))}
         </ul>
       </div>
-      <div class="backdrop__body-backdrop___1rvky "></div>
+      <div class="backdrop__body-backdrop___1rvky"></div>
     </>
   );
 }

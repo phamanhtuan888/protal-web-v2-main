@@ -3,7 +3,7 @@ import { getResponsiveImage } from "@/componentWebs/ImageNew";
 import dayjs from "dayjs";
 const Detail = ({ data, relateArticles, dataSite, query }) => {
   console.log(dataSite);
-  const { list } = relateArticles;
+  // const { list } = relateArticles;
   const imageResize = [380, 450, 540];
   return (
     // <div className="page-container">

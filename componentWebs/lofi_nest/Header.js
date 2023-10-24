@@ -44,6 +44,24 @@ function Header(props) {
     }
   };
 
+  //scoll nav
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div class="topbar">
@@ -90,7 +108,7 @@ function Header(props) {
           </div>
         </div>
       </div>
-      <header className="header">
+      <header className={`header ${isSticky ? 'sticky' : ''}`}>
         <div className={`opacity_menu ${isCurrent ? "current" : ""}`}/>
         <div className="container">
           <div className="row row-header align-items-center">

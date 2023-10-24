@@ -7,7 +7,7 @@ const Templates7 = ({ data, dataResult }) => {
   const { list } = dataResult;
 //  console.log(dataResult);
   const feed_back = list.slice(0, 3);
-  console.log(dataResult);
+  // console.log(dataResult);
   const OwlCarousel = dynamic(() => import(`../OwlCarousel`), {
     ssr: false,
     loading: () => null,
