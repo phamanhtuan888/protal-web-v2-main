@@ -20,10 +20,10 @@ class Index extends Component {
       isDemo,
     } = this.props;
     if (isDetail) {
-      // console.log('detail', isDetail)
+      console.log('detail', isDetail)
       try {
         const Templates = DATA_TEMPLATES[`${dataSite.templates.folder}_detail`];
-       
+       console.log(`${dataSite.templates.folder}_detail`);
         if (Templates) {
           return React.createElement(Templates, {
             ...this.props,
@@ -41,7 +41,7 @@ class Index extends Component {
       // console.log('product', isProduct)
       try {
         const Templates =
-          DATA_TEMPLATES[`${dataSite.templates.folder}_detail`];
+          DATA_TEMPLATES[`${dataSite.templates.folder}_product`];
         if (Templates) {
          
           return React.createElement(Templates, {

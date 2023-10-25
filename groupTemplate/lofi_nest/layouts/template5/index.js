@@ -7,7 +7,7 @@ const Templates5 = ({ data, dataResult }) => {
   
   const { list } = dataResult;
 
-  // console.log(data);
+  console.log(list);
   const OwlCarousel = dynamic(() => import(`../OwlCarousel`), {
     ssr: false,
     loading: () => null,

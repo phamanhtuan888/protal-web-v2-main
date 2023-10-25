@@ -124,6 +124,7 @@ class Detail extends React.Component {
             {...this.props}
             data={datainfoArticle}
             dataSite={dataSite}
+            
             isDetail
             relateArticles={relateArticles}
             query={query}

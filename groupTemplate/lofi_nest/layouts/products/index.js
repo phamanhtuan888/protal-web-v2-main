@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { getResponsiveImage } from "@/componentWebs/ImageNew";
 import ReactPaginate from "react-paginate";
 import FormatPrice from "@/utils/formatPrice";
+import fetchDataWithSort from "./controller";
 
 const SanPham = ({ dataResult, data, query }) => {
   const handlePageChange = (e) => {
@@ -13,7 +14,8 @@ const SanPham = ({ dataResult, data, query }) => {
     list: [ ...list],
     pagination,
   } = dataResult;
-  // console.log(data);
+  console.log(data);
+  
   return (
     <div className="container">
       <div className="row">
@@ -23,7 +25,7 @@ const SanPham = ({ dataResult, data, query }) => {
               <div class="filter-container">
                 <aside class="aside-item filter-type">
                   <div class="aside-title">
-                    Loại sản phẩm
+                    
                     <span class="nd-svg collapsible-plus">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +47,7 @@ const SanPham = ({ dataResult, data, query }) => {
                         <label for="filter-yen-tinh-che">
                           <input type="checkbox" id="filter-yen-tinh-che" />
                           <i class="fa" />
-                          Yến tinh chế
+                          {data.categoriesName}
                         </label>
                       </li>
                     </ul>
@@ -202,42 +204,40 @@ const SanPham = ({ dataResult, data, query }) => {
                       <span>A → Z</span>
                       <ul class="content_ul">
                         <li>
-                          <a href="javascript:;" onclick="sortby('default')">
+                          <a >
                             Mặc định
                           </a>
                         </li>
                         <li>
-                          <a href="javascript:;" onclick="sortby('alpha-asc')">
+                          <a >
                             A → Z
                           </a>
                         </li>
                         <li>
-                          <a href="javascript:;" onclick="sortby('alpha-desc')">
+                          <a>
                             Z → A
                           </a>
                         </li>
                         <li>
-                          <a href="javascript:;" onclick="sortby('price-asc')">
+                          <a>
                             Giá tăng dần
                           </a>
                         </li>
                         <li>
-                          <a href="javascript:;" onclick="sortby('price-desc')">
+                          <a >
                             Giá giảm dần
                           </a>
                         </li>
                         <li>
                           <a
-                            href="javascript:;"
-                            onclick="sortby('created-desc')"
+                            
                           >
                             Hàng mới nhất
                           </a>
                         </li>
                         <li>
                           <a
-                            href="javascript:;"
-                            onclick="sortby('created-asc')"
+                           
                           >
                             Hàng cũ nhất
                           </a>

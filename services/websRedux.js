@@ -138,7 +138,7 @@ export async function queryProductList(params) {
   if (attributes) {
     query.attributes = attributes;
   }
-  // console.log(`${CONFIG.API_SERVER_WEB}/products?${stringify(query)}`);
+  console.log(`${CONFIG.API_SERVER_WEB}/products?${stringify(query)}`);
   return request(`${CONFIG.API_SERVER_WEB}/products?${stringify(query)}`);
 }
 

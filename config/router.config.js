@@ -26,6 +26,11 @@ module.exports.routes = {
       name: 'about',
       component: 'User/Detail',
     },
+    {
+      path: '/:parentName([a-zA-Z0-9-]{1,10000})/:productsName([a-zA-Z0-9-]{1,10000})',
+      name: 'about',
+      component: 'User/Product',
+    },
     // trang chuyên mục
     { path: '/:name([a-zA-Z0-9-]{1,10000})', name: 'category', component: 'User/Category' },
   ],

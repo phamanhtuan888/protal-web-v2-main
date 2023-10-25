@@ -71,3 +71,6 @@ export default async ({ data, dispatch,query }) => {
   return dataResult;
 };
 
+
+
+
