@@ -138,12 +138,13 @@ export async function queryProductList(params) {
   if (attributes) {
     query.attributes = attributes;
   }
-  console.log(`${CONFIG.API_SERVER_WEB}/products?${stringify(query)}`);
+  // console.log(`${CONFIG.API_SERVER_WEB}/products?${stringify(query)}`);
   return request(`${CONFIG.API_SERVER_WEB}/products?${stringify(query)}`);
 }
 
 export async function queryProductInfo(payload) {
   const { url } = payload;
+  console.log(`${CONFIG.API_SERVER_WEB}/products/${url}`);
   return request(`${CONFIG.API_SERVER_WEB}/products/${url}`);
 }
 export async function queryTemplates(params) {

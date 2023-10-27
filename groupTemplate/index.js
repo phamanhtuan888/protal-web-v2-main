@@ -20,7 +20,7 @@ class Index extends Component {
       isDemo,
     } = this.props;
     if (isDetail) {
-      console.log('detail', isDetail)
+      // console.log('detail', isDetail)
       try {
         const Templates = DATA_TEMPLATES[`${dataSite.templates.folder}_detail`];
        console.log(`${dataSite.templates.folder}_detail`);
@@ -51,7 +51,7 @@ class Index extends Component {
             key: `${data?.id}_${moment().format("YYYYMMDDHHMMSS")}`,
           });
         }
-        return <Exception style={{ clear: "both" }} />;
+        return <Exception style={{ clear: "both",backgroundColor:'rebeccapurple' }} />;
       } catch (error) {
         // console.log(error);
         return null;
@@ -214,7 +214,7 @@ class Index extends Component {
         })
       );
     }
-    return <Exception style={{ clear: "both" }} />;
+    return <Exception style={{ clear: "both",backgroundColor:'red !impotant' }} />;
   }
 }
 

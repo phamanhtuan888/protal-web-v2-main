@@ -7,7 +7,7 @@ const Templates5 = ({ data, dataResult }) => {
   
   const { list } = dataResult;
 
-  console.log(list);
+  // console.log(data);
   const OwlCarousel = dynamic(() => import(`../OwlCarousel`), {
     ssr: false,
     loading: () => null,
@@ -19,7 +19,7 @@ const Templates5 = ({ data, dataResult }) => {
     1200: { items: 4 },
   };
   return (
-    <section class="section_product_new section_product">
+    <section class="section_product_new section_product" >
       <div class="container">
         <div class="block-title">
           <h2>
@@ -52,7 +52,8 @@ const Templates5 = ({ data, dataResult }) => {
                             <a
                               class="image_thumb scale_hover"
                               style={{ height: "247px" }}
-                              href={`/to-yen-chung-san/${item?.url}`}
+                              // href={`/product/to-yen-chung-san/${item?.url}`}
+                              href={`/product/${data?.url}/${item?.url}`}
                             title={item?.title}
                             >
                               <img
@@ -63,7 +64,7 @@ const Templates5 = ({ data, dataResult }) => {
                                   item?.images[0]?.file || "",
                                   [600, 900, 1600]
                                 )}
-                                alt="Yến chưng khang phục 2"
+                                
                               />
                             </a>
                             <div class="action d-xl-block d-none">

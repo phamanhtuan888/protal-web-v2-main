@@ -1,7 +1,9 @@
 .aside-item.sidebar-category {
     margin-bottom: 20px
 }
-
+span .product-price-old{
+    text-decoration: line-through;
+}
 @media (max-width: 991px) {
     .aside-item.sidebar-category {
         margin-bottom:20px

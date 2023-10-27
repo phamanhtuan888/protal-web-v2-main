@@ -20,7 +20,9 @@ const RenderTemplatesCategory = dynamic(() => import("@/groupTemplate"), {
 }))
 class Product extends React.Component {
   static async getInitialProps(ctx) {
+
     // console.log('ctx',ctx)
+
     const { store, dispatch, query, req } = ctx;
     let cookies;
     let host = "";
@@ -62,49 +64,52 @@ class Product extends React.Component {
     const SITEID_WEB = dataSiteResult?.id;
     await dispatch({
       type: "webs/fetchProductInfo",
-      payload: {},
+      payload: {url: query.productsName},
+      
     });
     const {
       webs: { dataProductInfo: data },
     } = store.getState();
 
+    console.log(data);
+
     let relateProducts;
     if (data?.id) {
       await dispatch({
         type: "webs/fetchListProduct",
-        payload: {
+        payload: { 
           filter: {
             status: "1",
             sitesId: data?.categories?.sitesId,
             categoriesId: data?.categoriesId,
             languagesId: data?.languagesId,
           },
-          range: [0, 5],
         },
         callback: (res) => {
-            relateProducts = res.result;
+          relateProducts = res.result;
         },
       });
     }
-    
+    // console.log(relateProducts);
 
     return {
       dataProductInfo: data,
-      url,
+      query,
       relateProducts,
     };
   }
 
   render() {
-    const { dataProductInfo, relateProducts, url, dataSite } = this.props;
+    const { dataProductInfo, relateProducts, query, dataSite } = this.props;
+    // console.log(dataSite);
     if (
-      Number(dataSite.id) === Number(dataProductInfo?.categories?.sitesId)
+      Number(dataSite.id) === Number(dataProductInfo?.categories?.sites?.id)
       && dataProductInfo?.status === 1
     ) {
       const headTitle =
         `${dataSite?.sitesName} -  ${dataProductInfo &&
-            dataProductInfo.title}` || "";
-      const { title, shortDescription } = dataProductInfo;
+          dataProductInfo.productsName}` || "";
+      const { productsName, shortDescription } = dataProductInfo;
       const ogImage = dataProductInfo?.images?.[0]?.file || "";
       let url = dataSite?.url;
       if (typeof window !== "undefined") {
@@ -115,8 +120,8 @@ class Product extends React.Component {
           <Head
             title={headTitle}
             dataSite={dataSite}
-            keywords={title}
-            description={`${shortDescription || title}`}
+            keywords={productsName}
+            description={`${shortDescription || productsName}`}
             ogImage={ogImage}
             url={url || ""}
           />
@@ -127,12 +132,12 @@ class Product extends React.Component {
             
             isProduct
             relateProducts={relateProducts}
-            url={url}
+            query={query}
           />
         </React.Fragment>
       );
     }
-    return <Exception style={{ clear: "both" }} />;
+    return <Exception style={{ clear: "both", backgroundColor:'black'  }} />;
   }
 }
 

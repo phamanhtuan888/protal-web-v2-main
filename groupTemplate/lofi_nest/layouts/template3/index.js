@@ -6,7 +6,7 @@ import FormatPrice from "@/utils/formatPrice";
 
 const Templates3 = ({ data, dataResult }) => {
   const { list } = dataResult;
-  // console.log(list);
+  // console.log(data);
   const OwlCarousel = dynamic(() => import(`../OwlCarousel`), {
     ssr: false,
     loading: () => null,
@@ -17,17 +17,12 @@ const Templates3 = ({ data, dataResult }) => {
     768: { items: 4 },
     995: { items: 5 },
   };
-  function formatNumber(numberString) {
-    const number = parseFloat(numberString);
-
-    if (isNaN(number)) {
-      return "Số không hợp lệ";
-    }
-
-    const formattedNumber = number.toLocaleString("vi-VN");
-
-    return formattedNumber;
+  function formatString(categoriesName) {
+    var string = categoriesName.toLowerCase();
+    string = string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return string.replace(/\s+/g, "-");
   }
+
   return (
     <div class="section_flash_sale">
       <div class="container">
@@ -78,8 +73,11 @@ const Templates3 = ({ data, dataResult }) => {
                           <form class="variants product-action ">
                             <div class="product-thumbnail">
                               <a
+                                href={`/product/${formatString(
+                                  item?.categories?.categoriesName
+                                )}/${item?.url}`}
                                 class="image_thumb scale_hover"
-                                style={{ height: "181px" }}
+                                // style={{ height: "181px" }}
                               >
                                 <img
                                   class="lazyload loaded"
@@ -95,10 +93,7 @@ const Templates3 = ({ data, dataResult }) => {
                               <span class="smart">- 10%</span>
                               <div class="action d-xl-block d-none">
                                 <div class="actions-secondary">
-                                  <a
-                                    title="Xem nhanh"
-                                    class="quick-view btn-views"
-                                  >
+                                  <a class="quick-view btn-views">
                                     <svg
                                       width="20"
                                       height="16"

@@ -87,7 +87,9 @@ const products = `${
 const article = `${
   publicRuntimeConfig.DOMAIN_STATIC
 }/static/lofi_nest/css/article.css`;
-
+const product = `${
+  publicRuntimeConfig.DOMAIN_STATIC
+}/static/lofi_nest/css/product.css`;
 //import js
 export const particlesjs = `${
   publicRuntimeConfig.DOMAIN_STATIC
@@ -124,6 +126,7 @@ export default function vga_soft(props) {
         <link rel="stylesheet" href={page} type="text/css" media="all" />
         <link rel="stylesheet" href={news} type="text/css" media="all" />
         <link rel="stylesheet" href={products} type="text/css" media="all" />
+        <link rel="stylesheet" href={product} type="text/css" media="all" />
         <link rel="stylesheet" href={article} type="text/css" media="all" />
         <link rel="stylesheet" href={breadcrumb} type="text/css" media="all" />
         <link rel="stylesheet" href={main} type="text/css" media="all" />

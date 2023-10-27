@@ -27,7 +27,7 @@ module.exports.routes = {
       component: 'User/Detail',
     },
     {
-      path: '/:parentName([a-zA-Z0-9-]{1,10000})/:productsName([a-zA-Z0-9-]{1,10000})',
+      path: '/product/:parentName([a-zA-Z0-9-]{1,10000})/:productsName([a-zA-Z0-9-]{1,10000})',
       name: 'about',
       component: 'User/Product',
     },

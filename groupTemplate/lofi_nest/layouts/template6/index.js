@@ -6,12 +6,14 @@ import FormatPrice from "@/utils/formatPrice";
 
 const Templates6 = ({ data, dataResult }) => {
   const { list } = dataResult;
+  console.log(dataResult);
+ 
   // console.log(list);
   const [selectedCategoryId, setSelectedCategoryId] = useState("620");
 
   const handleTabClick = (categoryId) => {
     setSelectedCategoryId(categoryId);
-    console.log(categoryId);
+    // console.log(categoryId);
   };
 
   const OwlCarousel = dynamic(() => import(`../OwlCarousel`), {
@@ -32,6 +34,11 @@ const Templates6 = ({ data, dataResult }) => {
       items: 4,
     },
   };
+  function formatString(categoriesName) {
+    var string = categoriesName.toLowerCase();
+    string = string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return string.replace(/\s+/g, "-");
+  }
   return (
     <section class="section_product_tab">
       <div class="container">
@@ -107,7 +114,6 @@ const Templates6 = ({ data, dataResult }) => {
                         transform: "translate3d(0px, 0px, 0px)",
                         transition: "all 0.25s ease 0s",
                       }}
-                     
                     >
                       {list.map((item, index) => {
                         if (selectedCategoryId === item.categoriesId) {
@@ -118,6 +124,9 @@ const Templates6 = ({ data, dataResult }) => {
                                   <a
                                     class="image_thumb scale_hover"
                                     style={{ height: "263px" }}
+                                    href={`/product/${formatString(
+                                      item?.categories?.categoriesName
+                                    )}/${item?.url}`}
                                   >
                                     <img
                                       class="lazyload loaded"
@@ -132,7 +141,7 @@ const Templates6 = ({ data, dataResult }) => {
                                   <span class="smart">- 9%</span>
                                   <div class="action d-xl-block d-none">
                                     <a
-                                      title="Xem nhanh"                                  
+                                      title="Xem nhanh"
                                       class="quick-view btn-views"
                                     >
                                       <svg
@@ -158,8 +167,8 @@ const Templates6 = ({ data, dataResult }) => {
                                         />
                                       </svg>
                                     </a>
-                                    <a                                    
-                                      class="btn-compare js-btn-wishlist setWishlist btn-views"                                   
+                                    <a
+                                      class="btn-compare js-btn-wishlist setWishlist btn-views"
                                       title="Thêm vào yêu thích"
                                     >
                                       <svg
@@ -183,13 +192,19 @@ const Templates6 = ({ data, dataResult }) => {
                                 <div class="product-info">
                                   <h3 class="product-name">
                                     <a title="Tổ yến tinh chế loại 1">
-                                      {item.productsName}₫
+                                      {item.productsName}
                                     </a>
                                   </h3>
                                   <div class="price-box">
-                                  <FormatPrice price={item.dealPrice} className="price" />
+                                    <FormatPrice
+                                      price={item.dealPrice}
+                                      className="price"
+                                    />
                                     {item.price !== "0" ? (
-                                      <FormatPrice price={item.price} className="compare-price" />
+                                      <FormatPrice
+                                        price={item.price}
+                                        className="compare-price"
+                                      />
                                     ) : null}
                                   </div>
                                 </div>

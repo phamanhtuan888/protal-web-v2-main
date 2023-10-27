@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
 import dynamic from "next/dynamic";
-import { useState, useEffect } from "react";
 import { getResponsiveImage } from "@/componentWebs/ImageNew";
 import ReactPaginate from "react-paginate";
 import FormatPrice from "@/utils/formatPrice";
-import fetchDataWithSort from "./controller";
+import React, { useEffect,useState} from 'react';
+import { fetchDataWithSort } from './controller';
+
 
 const SanPham = ({ dataResult, data, query }) => {
   const handlePageChange = (e) => {
@@ -14,7 +15,7 @@ const SanPham = ({ dataResult, data, query }) => {
     list: [ ...list],
     pagination,
   } = dataResult;
-  console.log(data);
+  // console.log(list);
   
   return (
     <div className="container">
@@ -262,7 +263,7 @@ const SanPham = ({ dataResult, data, query }) => {
                           <a
                             class="image_thumb scale_hover"
                             style={{ height: "186px" }}
-                            href={`/tat-cả-san-pham/${item?.url}`}
+                            href={`/product/${data?.url}/${item?.url}`}
                             title={item?.title}
                           >
                             <img
@@ -327,7 +328,7 @@ const SanPham = ({ dataResult, data, query }) => {
                         <div class="product-info">
                           <h3 class="product-name">
                             <a
-                              href={`/tat-cả-san-pham/${item?.url}`}
+                               href={`/product/${data?.url}/${item?.url}`}
                               title={item?.title}
                             >
                               {item.productsName}
