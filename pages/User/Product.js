@@ -71,7 +71,7 @@ class Product extends React.Component {
       webs: { dataProductInfo: data },
     } = store.getState();
 
-    console.log(data);
+    // console.log(data);
 
     let relateProducts;
     if (data?.id) {

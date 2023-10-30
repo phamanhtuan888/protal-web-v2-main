@@ -8,7 +8,7 @@ import { useState } from "react";
 const Product = ({ data, relateProducts, dataSite }) => {
   const { list } = relateProducts;
   const categoriesId = data.categoriesId;
-  // console.log(list);
+  // console.log(data);
   const imageResize = [380, 450, 540];
 
   const OwlCarousel = dynamic(() => import(`./OwlCarousel`), {
@@ -146,10 +146,11 @@ const Product = ({ data, relateProducts, dataSite }) => {
                     </div>
                   </OwlCarousel>
                   <OwlCarousel
-                    style={{ display: "block" }}
+                    style={{ display: 'block',marginTop:'10px' }}
                     dots={false}
                     nav={false}
                     items={5}
+                   
                   >
                     <div class="owl-stage-outer">
                       <div
@@ -157,12 +158,13 @@ const Product = ({ data, relateProducts, dataSite }) => {
                         style={{
                           transform: "translate3d(0px, 0px, 0px)",
                           transition: "all 0.25s ease 0s",
+                          
                         }}
                       >
                         {data?.images?.map((item, index) => (
                           <div
                             class="p-100 owl-item"
-                            style={{ marginTop: "10px" }}
+                            style={{ padding:'3px',border: '1px solid #ebebeb' }}
                           >
                             <img
                               class="lazy"
@@ -277,34 +279,6 @@ const Product = ({ data, relateProducts, dataSite }) => {
                         </div>
                       </div>
 
-                      <div class="box-variant clearfix  d-none ">
-                        {/* <div
-                          class="selector-wrapper"
-                          style={{ textAlign: "left", marginBottom: "15px" }}
-                        >
-                          <label>Kích thước</label>
-                          <select
-                            class="single-option-selector"
-                            data-option="option1"
-                            id="product-selectors-option-0"
-                          >
-                            <option value="120ml">120ml</option>
-                            <option value="250ml">250ml</option>
-                          </select>
-                        </div>
-                        <select
-                          id="product-selectors"
-                          class="form-control form-control-lg"
-                          name="variantId"
-                          style={{ display: "none" }}
-                        >
-                          <option selected="selected" value="94312867">
-                            120ml - 260.000₫
-                          </option>
-
-                          <option value="94312868">250ml - 465.000₫</option>
-                        </select> */}
-                      </div>
                       <div
                         class="product-promotion rounded-sm"
                         id="lofi-salebox"
@@ -343,22 +317,12 @@ const Product = ({ data, relateProducts, dataSite }) => {
                           <div class="custom custom-btn-number show">
                             <label class="sl section">Số lượng:</label>
                             <div class="input_number_product form-control">
-                              {/* <button
-                                class="btn_num num_1 button button_qty"
-                                type="button"
-                              >
-                                -
-                              </button> */}
+                              
                               <input
                                 type="number"
                                 class="form-control prd_quantity"
                               />
-                              {/* <button
-                                class="btn_num num_2 button button_qty"
-                                type="button"
-                              >
-                                +
-                              </button> */}
+                             
                             </div>
                           </div>
                           <div class="btn-mua button_actions clearfix">

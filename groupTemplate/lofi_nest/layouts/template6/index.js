@@ -7,7 +7,7 @@ import FormatPrice from "@/utils/formatPrice";
 const Templates6 = ({ data, dataResult }) => {
   const { list } = dataResult;
   console.log(dataResult);
- 
+
   // console.log(list);
   const [selectedCategoryId, setSelectedCategoryId] = useState("620");
 
@@ -138,7 +138,11 @@ const Templates6 = ({ data, dataResult }) => {
                                       )}
                                     />
                                   </a>
-                                  <span class="smart">- 9%</span>
+                                  {item.price !== "0" ? (
+                                    <span class="smart">
+                                      - {Math.round(((item.price - item.dealPrice) / item.price) * 100 )} %
+                                    </span>
+                                  ) : null}
                                   <div class="action d-xl-block d-none">
                                     <a
                                       title="Xem nhanh"

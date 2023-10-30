@@ -276,6 +276,9 @@ const SanPham = ({ dataResult, data, query }) => {
                               )}
                             />
                           </a>
+                          {item.price !== "0" ? (
+                             <span class="smart"> - {Math.round(((item.price - item.dealPrice) / item.price) * 100 )} % </span>
+                          ) : null}
                           <div class="action d-xl-block d-none">
                             <div class="actions-secondary">
                               <a title="Xem nhanh" class="quick-view btn-views">

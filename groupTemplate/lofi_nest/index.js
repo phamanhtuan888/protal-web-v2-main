@@ -78,7 +78,10 @@ const product = dynamic(() => import("./layouts/product"), {
   ssr: true,
   loading: () => null,
 });
-
+const DetailView = dynamic(() => import("./layouts/DetailView"), {
+  ssr: true,
+  loading: () => null,
+});
 
 const themeDetail = dynamic(() => import("./layouts/themeDetail"), {
   ssr: true,
@@ -112,6 +115,7 @@ export default {
   [`${folder}_introduceChild`]: introduceChild,
   [`${folder}_detail`]: detail,
   [`${folder}_product`]: product,
+  [`${folder}_DetailView`]: DetailView,
   [`${folder}_isTheme`]: themeDetail,
   [`${folder}_isDemo`]: demo,
   [`${folder}_products`]: products,

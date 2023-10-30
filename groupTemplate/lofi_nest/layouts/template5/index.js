@@ -63,10 +63,12 @@ const Templates5 = ({ data, dataResult }) => {
                                 src={getResponsiveImage(
                                   item?.images[0]?.file || "",
                                   [600, 900, 1600]
-                                )}
-                                
+                                )}                         
                               />
                             </a>
+                            {item.price !== "0" ? (
+                               <span class="smart">- {Math.round(((item.price - item.dealPrice)/item.price)*100)}%</span>
+                            ):null}
                             <div class="action d-xl-block d-none">
                               <div class="actions-secondary">
                                 <a
